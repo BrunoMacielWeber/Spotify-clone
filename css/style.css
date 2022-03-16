@@ -1,0 +1,89 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebar {
+    float: left;
+    width: 250px;
+    padding: 10px 10px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: black;
+}
+
+.sidebar-wraper {
+    padding-bottom: 200px;
+}
+
+.sidebar_menu {
+    margin: 20px 0;
+    color: rgb(190, 190, 190);
+}
+
+.sidebar_logo img {
+    max-width: 150px;
+    width: 80%;
+}
+
+.sidebar_menu a {
+    color: rgb(190, 190, 190);
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+
+.sidebar_menu svg {
+    margin: 0 20px;
+}
+
+.sidebar_menu a.sidebar_menu_selecionado {
+    color: white;
+    background-color: rgb(80, 80, 80);
+    border-radius: 5px;
+}
+
+.sidebar_menu_item {
+    margin-top: 12px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.sidebar_menu p.sidebar_menu_title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.sidebar_menu_item_componente {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+}
+
+.sidebar_menu_componente {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+    background-color: purple;
+}
+
+.sidebar_menu_item span {
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 10px;
+}
