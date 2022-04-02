@@ -1,5 +1,5 @@
-var audioPlayer = document.getElementById('audioplayer');
 var loaded = false;
+var audioPlayer = document.getElementById('audioplayer');
 var playBtn = document.getElementById('playBtn');
 var pauseBtn = document.getElementById('pauseBtn');
 
@@ -21,25 +21,26 @@ playBtn.addEventListener('click', (e) => {
 
 const playSong = (file) => {
     if(loaded == false) {
-        audioPlayer.innerHTML = `<source src="`+file+`" type="audio/mp3">`;
+        
         loaded = true;
     }
+    audioPlayer.stop();
+    audioPlayer.innerHTML = `<source src="`+file+`" type="audio/mp3">`;
     audioPlayer.play();
     playBtn.style.display = "none";
     pauseBtn.style.display = "inline";
 }
 
-document.querySelectorAll('.main_col').forEach(item =>{
-    item.addEventListener('click', event=>{
+document.querySelectorAll('.main_col').forEach(item => {
+    item.addEventListener('click', event=> {
         let image = item.getAttribute('data-image');
         let artist = item.getAttribute('data-artist');
         let song = item.getAttribute('data-song');
         let file = item.getAttribute('data-file');
         let playerArtistComponent = document.getElementsByClassName('player_artist');
-        playerArtistComponent[0].innerHTML = `
-            <img src="`+image+`">
-            <h3>`+artist+`<br><span>`+song+`</span></h3>
-            `;
+        playerArtistComponent[0].innerHTML = 
+           `<img src="`+image+`">
+            <h3>`+artist+`<br><span>`+song+`</span></h3>`;
             playSong(file);
     });
 });

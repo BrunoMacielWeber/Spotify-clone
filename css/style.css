@@ -27,8 +27,9 @@ html, body {height: 100%;}
 }
 
 .sidebar_logo img {
-    max-width: 150px;
-    width: 80%;
+    max-width: 140px;
+    width: 60%;
+    margin: 10px;
 }
 
 .sidebar_menu a {
@@ -54,15 +55,11 @@ html, body {height: 100%;}
     vertical-align: middle;
 }
 
-.sidebar_menu p.sidebar_menu_title {
-    color: white;
-    text-transform: uppercase;
-    font-size: 14px;
-}
 
 .sidebar_menu_item_componente {
     width: 30px;
     height: 30px;
+    margin-left: 5%;
     text-align: center;
     line-height: 30px;
     display: inline-block;
@@ -74,6 +71,7 @@ html, body {height: 100%;}
 .sidebar_menu_componente {
     width: 30px;
     height: 30px;
+    margin-left: 5%;
     text-align: center;
     line-height: 30px;
     display: inline-block;
@@ -88,20 +86,13 @@ html, body {height: 100%;}
     padding: 0 10px;
 }
 
-.sidebar_menu_item img {
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-    display: inline-block;
-}
-
 .sidebar_playlists {
-    padding: 20px 0;
+    margin-top: 10px;
     border-top: 1px solid rgb(40, 40, 40);
 }
 
 .sidebar_playlists a {
-    margin: 10px 0;
+    margin: 1px 10px 0;
     display: block;
     color: rgb(190, 190, 190);
     text-decoration: none;
