@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Gotham', sans-serif;
 }
 
 html, body {height: 100%;}
@@ -50,34 +50,35 @@ html, body {height: 100%;}
 }
 
 .sidebar_menu_item {
-    margin-top: 12px;
+    margin-top: 18px;
     cursor: pointer;
     vertical-align: middle;
 }
 
 
 .sidebar_menu_item_componente {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-left: 5%;
     text-align: center;
-    line-height: 30px;
+    line-height: 25px;
+    font-size: 20px;
     display: inline-block;
     color: black;
-    font-weight: bold;
-    background-color: white;
+    background-color: rgb(199, 199, 199);
 }
 
 .sidebar_menu_componente {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-left: 5%;
     text-align: center;
-    line-height: 30px;
+    line-height: 25px;
+    font-size: 20px;
     display: inline-block;
-    color: black;
-    font-weight: bold;
-    background-color: purple;
+    color: rgb(194, 193, 193);
+    background-image: linear-gradient(to bottom right, rgb(47, 0, 255), rgb(196, 186, 223));
+    
 }
 
 .sidebar_menu_item span {
@@ -87,7 +88,7 @@ html, body {height: 100%;}
 }
 
 .sidebar_playlists {
-    margin-top: 10px;
+    margin-top: 15px;
     border-top: 1px solid rgb(40, 40, 40);
 }
 
@@ -165,13 +166,13 @@ html, body {height: 100%;}
 
 .player {
     width: 100%;
-    padding: 20px;
-    height: 110px;
+    padding: 15px;
+    height: 85px;
     position: absolute;
     left: 0;
     bottom: 0;
     display: flex;
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(35, 35, 35);
 }
 
 .player_artist {
@@ -179,7 +180,7 @@ html, body {height: 100%;}
 }
 
 .player_artist img {
-    max-width: 70px;
+    max-width: 55px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -205,15 +206,23 @@ html, body {height: 100%;}
 
 .player_control_buttons a {
     color: white;
-    margin: 8px 15px;
+    margin: 8px;
     font-size: 18px;
+}
+
+.player_control_buttons a#playBtn {
+    font-size: 30px;
+}
+
+.player_control_buttons a#pauseBtn {
+    font-size: 30px;
 }
 
 .player_control_progress {
     width: 100%;
     max-width: 500px;
-    height: 7px;
-    margin-top: 20px;
+    height: 4px;
+    margin-top: 10px;
     position: relative;
     border-radius: 8px;
     display: inline-block;
@@ -225,7 +234,7 @@ html, body {height: 100%;}
     left: 0;
     top: 0;
     width: 0;
-    height: 7px;
+    height: 4px;
     border-radius: 8px;
     background-color: white;
 }

@@ -1,5 +1,5 @@
 var loaded = false;
-var audioPlayer = document.getElementById('audioplayer');
+var audioPlayer = document.getElementById('audioPlayer');
 var playBtn = document.getElementById('playBtn');
 var pauseBtn = document.getElementById('pauseBtn');
 
@@ -21,14 +21,25 @@ playBtn.addEventListener('click', (e) => {
 
 const playSong = (file) => {
     if(loaded == false) {
-        
         loaded = true;
     }
-    audioPlayer.stop();
+    audioPlayer.load();
     audioPlayer.innerHTML = `<source src="`+file+`" type="audio/mp3">`;
     audioPlayer.play();
     playBtn.style.display = "none";
     pauseBtn.style.display = "inline";
+    progressBar();
+}
+
+function progressBar() {
+    setInterval(timer,1000);
+    function timer() {
+        var audioLength = audioPlayer.duration;
+        let barActual = audioPlayer.currentTime;
+        let barPosition = barActual / audioLength * 100;
+        let progressBarComponent = document.getElementsByClassName('player_control_progress');
+        progressBarComponent[0].innerHTML = `<div style="width: `+barPosition+`%" class="player_control_progress_2">`;
+    }
 }
 
 document.querySelectorAll('.main_col').forEach(item => {
@@ -37,13 +48,12 @@ document.querySelectorAll('.main_col').forEach(item => {
         let artist = item.getAttribute('data-artist');
         let song = item.getAttribute('data-song');
         let file = item.getAttribute('data-file');
+        playBtn.style.display = "none";
+        pauseBtn.style.display = "inline";
         let playerArtistComponent = document.getElementsByClassName('player_artist');
         playerArtistComponent[0].innerHTML = 
            `<img src="`+image+`">
             <h3>`+artist+`<br><span>`+song+`</span></h3>`;
-            playSong(file);
+        playSong(file);
     });
 });
-
-//utilizar set interval a cada segundo e atualizar a barra de progresso.
-//Usar elemento get atual e fazer segundo atual/segundo total * 100
